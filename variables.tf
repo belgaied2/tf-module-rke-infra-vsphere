@@ -16,15 +16,10 @@ variable "vm_template" {
     default = ""
 }
 
-variable "private_key" {
-  description = "path of private key for RKE nodes"
-  default     = "/home/mohamed/.ssh/MacOSsKey.pem"
-}
-
-variable "rancher_version" {
-  description = "Version of Rancher Server"
-  default     = "2.4.8"
-}
+# variable "rancher_version" {
+#   description = "Version of Rancher Server"
+#   default     = "2.4.8"
+# }
 
 
 variable "vm_count" {
@@ -68,14 +63,21 @@ variable "vsphere_guest_id" {
   default     = "rhel7_64Guest"
 }
 
-variable "ssh_user" {
-  description = "SSH Username to connect to VM with"
-}
-
 variable "vm_name_prefix" {
   description = "Prefix for the VM name in vSphere"
   default     = "rancher-ha"
 }
+
+# Connectivity to final VMs
+variable "ssh_user" {
+  description = "SSH Username to connect to VM with"
+}
+
+variable "private_key" {
+  description = "path of private key for RKE nodes"
+}
+
+
 
 
 
